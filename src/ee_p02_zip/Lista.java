@@ -321,7 +321,7 @@ public class Lista<T>
         Arbol=String.valueOf(c[1]);
         Comprimir(0,"");
         Arbol=String.valueOf(c[1]+"||"+MSMcomprimido);
-        Pantalla p=new Pantalla();ee_p02_Zip e=new ee_p02_Zip();
+        Pantalla p=new Pantalla();ee_p02_zip e=new ee_p02_zip();
         p.dato(Arbol.toUpperCase());
         e.TxGuardar(Arbol.toUpperCase());
         p.setLocationRelativeTo(null);

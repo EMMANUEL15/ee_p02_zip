@@ -125,7 +125,7 @@ public void preOrden(NodoBinario<T> raiz){
 		}
 public void ExtraerArchivo(String x){
 	texto(x);
-        Pantalla p=new Pantalla();ee_p02_Zip e=new ee_p02_Zip();
+        Pantalla p=new Pantalla();ee_p02_zip e=new ee_p02_zip();
         e.TxGuardar(msmd.toUpperCase());
         p.dato(msmd.toUpperCase());
         p.setLocationRelativeTo(null);
