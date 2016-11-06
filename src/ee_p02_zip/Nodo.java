@@ -41,5 +41,4 @@ public class Nodo<T> {
        }
     public int getFre(){ return Dat.getP() ;} 
     public String getdato(){ return ""+Dat.getDato();}
-    
 }

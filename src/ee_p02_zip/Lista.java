@@ -212,7 +212,7 @@ public class Lista<T>
     * tomando un caracte como dato y su frcuencia como prioridad lo envia al ordenodor.
     */
    public void LeerMsj(String msj,int i){
-       this.Mensaje=msj; boolean sts=true;
+       this.Mensaje=msj.toUpperCase(); boolean sts=true;
        String [] c=msj.split(""); int frecuencia=0;
        for(int j=0;j<msj.length();j++){
           if(c[i].equals(c[j])){
@@ -254,7 +254,7 @@ public class Lista<T>
         Pantalla p=new Pantalla();
         p.setLocationRelativeTo(null);
         p.setVisible(true);
-      this.Mensaje=msj; 
+      this.Mensaje=msj.toUpperCase(); 
       String letras =Mensaje, n,z="";
 		int x=0,separador=0;
       for (int i=0; i<letras.length(); i++){
@@ -270,8 +270,8 @@ public class Lista<T>
            z=String.valueOf(z+"\n");
            separador=0;}
       }
-      p.dato(z);
-      p.datB(Mensaje);
+      p.dato(z.toUpperCase());
+      p.datB(Mensaje.toUpperCase());
    }
    /**
     * recorre al para crear una cadena cola cual se usara para crea el mismo arbol y poder leer en mensaje
@@ -303,14 +303,14 @@ public class Lista<T>
 	       }else{
 	     String []m=c[i-1].split("");
 	     for(int s=1;s<m.length;s++){
-	       MSM=String.valueOf(MSM+m[s]);
+	       MSM=String.valueOf(MSM.toUpperCase()+m[s].toUpperCase());
 	       }
 	    }
 	   } 
 	   } 
 	  z++;
 	  if(z<Mensaje.length()){Comprimir(z,MSM);}
-	  else{this.MSMcomprimido=MSM; }
+	  else{this.MSMcomprimido=MSM.toUpperCase(); }
    }
    public  void principal(){
         recorrer();
@@ -322,8 +322,8 @@ public class Lista<T>
         Comprimir(0,"");
         Arbol=String.valueOf(c[1]+"||"+MSMcomprimido);
         Pantalla p=new Pantalla();ee_p02_Zip e=new ee_p02_Zip();
-        p.dato(Arbol);
-        e.TxGuardar(Arbol);
+        p.dato(Arbol.toUpperCase());
+        e.TxGuardar(Arbol.toUpperCase());
         p.setLocationRelativeTo(null);
         p.setVisible(true);
     }

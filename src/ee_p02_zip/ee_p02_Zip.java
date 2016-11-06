@@ -1,6 +1,6 @@
 package ee_p02_zip;
 
-
+ 
 import java.awt.HeadlessException;
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,8 +31,7 @@ public class ee_p02_Zip extends javax.swing.JFrame {
     public ee_p02_Zip() {
         initComponents();
     }
-
-    @SuppressWarnings("unchecked")                      
+                     
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -206,7 +205,7 @@ public class ee_p02_Zip extends javax.swing.JFrame {
          BufferedReader b=new BufferedReader(f);
          String Contenido;
          while((Contenido=b.readLine())!=null){
-             texto=texto+Contenido;
+             texto=texto+Contenido.toUpperCase();
          }
        }catch(Exception e){ JOptionPane.showMessageDialog(rootPane,"No se encontro el archivo");}
        Ruta.setText("");
@@ -214,11 +213,11 @@ public class ee_p02_Zip extends javax.swing.JFrame {
     } 
     private void comprimirActionPerformed(java.awt.event.ActionEvent evt) {                                          
       Lista L=new Lista();Pantalla p=new Pantalla();
-      L.convers (texto);
+      L.convers (texto.toUpperCase());
     }    
     private void DescomprimirActionPerformed(java.awt.event.ActionEvent evt) {                                             
        Pantalla p=new Pantalla();
-        p.dato(texto);
+        p.dato(texto.toUpperCase());
         p.setLocationRelativeTo(null);
         p.setVisible(true);
     }                                            

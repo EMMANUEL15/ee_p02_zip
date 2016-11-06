@@ -17,10 +17,9 @@ public String Mensaje,Arbol;
  */
 private void texto(String cadena){
 	try{
-	
-	String[]t=cadena.split((String)("\\|\\|"));//separacion entre el arbol y texto
-	this.Mensaje=t[1];			//parte del Mensaje
-	this.Arbol=t[0];			//parte de Arbol
+	String[]t=cadena.toUpperCase().split((String)("\\|\\|"));//separacion entre el arbol y texto
+	this.Mensaje=t[1].toUpperCase();			//parte del Mensaje
+	this.Arbol=t[0].toUpperCase();			//parte de Arbol
 	String[] x=Arbol.split("-");//Separarar los caratere del Arbol
 	 for(int i=0;i<x.length;i++){		//crear arbol
 		Arbol(R,x[i],x[i+1],0);
@@ -87,7 +86,7 @@ public void leer(NodoBinario<T> raiz,int i,String m){
 		if(i<Mensaje.length()){
 			leer(R,i,m);
 		}else{
-			 this.msmd=m;
+			 this.msmd=m.toUpperCase();
 			 }
 	}
 	if(c[i].equals("1")){
@@ -97,7 +96,7 @@ public void leer(NodoBinario<T> raiz,int i,String m){
 			if(i<Mensaje.length()){
 				leer(raiz.getDerecha(),i,m);
 			}else{
-			 this.msmd=m;
+			 this.msmd=m.toUpperCase();
 			 }
 		}//**(no)
 	}else{
@@ -107,7 +106,7 @@ public void leer(NodoBinario<T> raiz,int i,String m){
 			if(i<Mensaje.length()){
 				leer(raiz.getIzquierda(),i,m);
 			}else{
-			 this.msmd=m;
+			 this.msmd=m.toUpperCase();
 			 }
 		}//**(no)
 	}
@@ -127,8 +126,8 @@ public void preOrden(NodoBinario<T> raiz){
 public void ExtraerArchivo(String x){
 	texto(x);
         Pantalla p=new Pantalla();ee_p02_Zip e=new ee_p02_Zip();
-        e.TxGuardar(msmd);
-        p.dato(msmd);
+        e.TxGuardar(msmd.toUpperCase());
+        p.dato(msmd.toUpperCase());
         p.setLocationRelativeTo(null);
         p.setVisible(true);
 }
